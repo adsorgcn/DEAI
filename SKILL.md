@@ -1,7 +1,7 @@
 ---
 name: DeAI
-version: 1.2.1
-description: "DeAI: Improve AI-drafted text to sound naturally human. Three-layer editing: remove overused filler phrases, restructure for natural rhythm (detects sentence pattern repetition, over-complex sentences, and tone-content mismatch), mark positions for authentic personal voice. Adds review markers ([💬] [📝] [📊]) for user to fill in; does not generate content. Supports Chinese, English, Japanese, Korean."
+version: 1.3.0
+description: "DeAI: Edit AI drafts using the default MARK workflow, which removes filler, adjusts rhythm and marks places for the author's own expressions. Explicit PROFILE requests use a supplied evidence-based author profile to rewrite or draft text. MARK supports Chinese, English, Japanese and Korean; PROFILE uses only the languages supported by its supplied evidence."
 author: ilang-ai
 homepage: https://ilang.ai
 tags:
@@ -12,6 +12,25 @@ tags:
   - multilingual
   - content-quality
 ---
+
+```ilang
+::ILANG::v5.0
+[TYPE:skill_router]
+[ID:DEAI-MODE-ROUTER-20261003]
+[BASE_VERSION:1.2.1]
+[EXTENSION_VERSION:1.0]
+[STATUS:candidate_awaiting_owner_calibration]
+
+::RULE{route_before_loading}
+  T:未显式选择个人 PROFILE 写作时 使用 MARK 默认模式 读取 prompt.md 按 DeAI: 前缀激活
+  T:用户显式指定 mode=PROFILE 或明确要求使用已选定本人画像写作时 读取 references/profile-mode-v1.0-2026-10-03.ilang.md 与指定画像
+  T:profile=SUN 映射到 profiles/sun-v1.0-2026-10-03.ilang.md 该画像为中文候选 仍待本人样文校准
+  T:PROFILE 和 MARK 为独立路径 不在 PROFILE 中叠加默认 prompt.md 的只标位置 固定问句数量或平台口吻
+  T:PROFILE 必须有可用的作者画像与当前写作素材 缺失时明确说明 不把通用去 AI 味处理称为个人风格
+  T:prompt.iml.md 只编译了 MARK 的 prompt.md 扩展与画像各有同名的 .iml.md
+  T:下方三层编辑 平台指南与各语言使用说明描述 MARK 默认模式 不覆盖 PROFILE 路由
+  T:加载本技能不授权上传语料 读取私人日志或自动执行其他任务
+```
 
 # DeAI: Make AI Drafts Sound Like You
 
@@ -29,15 +48,15 @@ DeAI is a writing quality tool that helps you edit AI drafts into text that carr
 
 ### Three-Layer Editing
 
-```
-[Layer 1] CLEAN: Remove overused filler phrases. Built-in lists for Chinese (21), English (16), Japanese (10), Korean (8).
-[Layer 2] RESTRUCTURE: Vary sentence rhythm. Lead with opinions. Replace vague adjectives with specific numbers. Add rhetorical questions for natural tone.
-[Layer 3] MARK: Flag positions where your personal voice should go. YOU add the expressions; the tool only marks where.
+```text
+Layer 1: CLEAN: Remove overused filler phrases. Built-in lists for Chinese (21), English (16), Japanese (10), Korean (8).
+Layer 2: RESTRUCTURE: Vary sentence rhythm. Lead with opinions. Replace vague adjectives with specific numbers. Add rhetorical questions for natural tone.
+Layer 3: MARK: Flag positions where your personal voice should go. YOU add the expressions; the tool only marks where.
 ```
 
-### What this is NOT
+### Default MARK scope
 
-DeAI is a text editing assistant. It does not generate content, access files, make network requests, or run automatically. Each use requires you to paste text and explicitly request editing. You review all changes before using the output.
+The default MARK prompt edits supplied text and adds review markers. It does not generate new content, access files, make network requests, or run automatically. Each use requires you to paste text and explicitly request editing. Explicit PROFILE requests follow the independent extension above, which can rewrite or draft from supplied material and a supplied author profile.
 
 **Responsible use:** This tool improves writing style and authenticity. It is your responsibility to comply with applicable disclosure requirements, academic integrity policies, and platform rules regarding AI-assisted content. Do not use DeAI to misrepresent authorship where disclosure is required.
 
@@ -81,15 +100,15 @@ DeAI是一个写作编辑工具，帮你把AI初稿改成带有你个人风格�
 
 ### 三层编辑
 
-```
+```text
 [第一层] 清理：删掉过度使用的套话。内置中文21个、英文16个、日文10个、韩文8个。
 [第二层] 重组：调节句子节奏、观点前置、数字替换形容词、加反问增加自然感。
 [第三层] 标注：标记应该加入你个人表达的位置。你自己加，工具只标位置。
 ```
 
-### 这个工具不是什么
+### 默认 MARK 模式的范围
 
-DeAI是文字编辑助手。它不生成内容、不访问文件、不联网、不自动运行。每次使用都需要你主动粘贴文字并请求编辑。所有修改由你审核后才使用。
+默认 MARK 模式编辑已有文字并添加标记，不生成新内容、不访问文件、不联网、不自动运行。每次使用都需要你主动粘贴文字并请求编辑。显式 PROFILE 请求走上面的独立扩展，根据当前素材和指定作者画像改写或写草稿。
 
 **负责任使用：** 本工具用于提升写作风格和真实感。遵守适用的披露要求、学术诚信政策和平台关于AI辅助内容的规则是你的责任。
 
