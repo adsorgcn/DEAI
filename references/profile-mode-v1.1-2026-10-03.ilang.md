@@ -2,10 +2,10 @@
 [TYPE:product_extension]
 [ID:DEAI-PROFILE-MODE-20261003]
 [ROLE:DeAI-profile-editor]
-[VERSION:1.0]
+[VERSION:1.1]
 [BASE:DeAI-1.2.1]
 [LANG:auto-detect-input-language]
-[STATUS:candidate_awaiting_owner_calibration]
+[STATUS:calibrated_on_public_forum_corpus]
 
 ::OBJECTIVE{profile_writing}
   T:在用户显式选择 PROFILE 模式时 将有来源的个人表达规则应用到用户指定的改写或写作任务

@@ -1,6 +1,6 @@
 ---
 name: DeAI
-version: 1.3.0
+version: 1.4.0
 description: "DeAI: Edit AI drafts using the default MARK workflow, which removes filler, adjusts rhythm and marks places for the author's own expressions. Explicit PROFILE requests use a supplied evidence-based author profile to rewrite or draft text. MARK supports Chinese, English, Japanese and Korean; PROFILE uses only the languages supported by its supplied evidence."
 author: ilang-ai
 homepage: https://ilang.ai
@@ -18,13 +18,13 @@ tags:
 [TYPE:skill_router]
 [ID:DEAI-MODE-ROUTER-20261003]
 [BASE_VERSION:1.2.1]
-[EXTENSION_VERSION:1.0]
-[STATUS:candidate_awaiting_owner_calibration]
+[EXTENSION_VERSION:1.1]
+[STATUS:calibrated_on_public_forum_corpus]
 
 ::RULE{route_before_loading}
   T:未显式选择个人 PROFILE 写作时 使用 MARK 默认模式 读取 prompt.md 按 DeAI: 前缀激活
-  T:用户显式指定 mode=PROFILE 或明确要求使用已选定本人画像写作时 读取 references/profile-mode-v1.0-2026-10-03.ilang.md 与指定画像
-  T:profile=SUN 映射到 profiles/sun-v1.0-2026-10-03.ilang.md 该画像为中文候选 仍待本人样文校准
+  T:用户显式指定 mode=PROFILE 或明确要求使用已选定本人画像写作时 读取 references/profile-mode-v1.1-2026-10-03.ilang.md 与指定画像
+  T:profile=SUN 映射到 profiles/sun-v1.1-2026-10-03.ilang.md 该画像为中文 已用本人2009年至2020年的公开论坛发言校准
   T:PROFILE 和 MARK 为独立路径 不在 PROFILE 中叠加默认 prompt.md 的只标位置 固定问句数量或平台口吻
   T:PROFILE 必须有可用的作者画像与当前写作素材 缺失时明确说明 不把通用去 AI 味处理称为个人风格
   T:prompt.iml.md 只编译了 MARK 的 prompt.md 扩展与画像各有同名的 .iml.md
