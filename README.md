@@ -22,7 +22,7 @@ Open `prompt.md`, paste it into any AI, then send your draft prefixed with `DeAI
 
 ## 版本 / Version
 
-1.2.0。变更记录看 git tag。
+1.2.1。变更记录看 git tag。
 
 ## License
 

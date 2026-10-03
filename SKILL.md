@@ -1,7 +1,7 @@
 ---
 name: DeAI
-version: 1.2.0
-description: "DeAI — Improve AI-drafted text to sound naturally human. Three-layer editing: remove overused filler phrases, restructure for natural rhythm (detects sentence pattern repetition, over-complex sentences, and tone-content mismatch), mark positions for authentic personal voice. Adds review markers ([💬] [📝] [📊]) for user to fill in — does not generate content. Supports Chinese, English, Japanese, Korean."
+version: 1.2.1
+description: "DeAI: Improve AI-drafted text to sound naturally human. Three-layer editing: remove overused filler phrases, restructure for natural rhythm (detects sentence pattern repetition, over-complex sentences, and tone-content mismatch), mark positions for authentic personal voice. Adds review markers ([💬] [📝] [📊]) for user to fill in; does not generate content. Supports Chinese, English, Japanese, Korean."
 author: ilang-ai
 homepage: https://ilang.ai
 tags:
@@ -13,9 +13,9 @@ tags:
   - content-quality
 ---
 
-# DeAI — Make AI Drafts Sound Like You
+# DeAI: Make AI Drafts Sound Like You
 
-# DeAI — 让AI初稿听起来像你自己写的
+# DeAI：让AI初稿听起来像你自己写的
 
 ---
 
@@ -30,9 +30,9 @@ DeAI is a writing quality tool that helps you edit AI drafts into text that carr
 ### Three-Layer Editing
 
 ```
-[Layer 1] CLEAN      — Remove overused filler phrases. Built-in lists for Chinese (21), English (16), Japanese (10), Korean (8).
-[Layer 2] RESTRUCTURE — Vary sentence rhythm. Lead with opinions. Replace vague adjectives with specific numbers. Add rhetorical questions for natural tone.
-[Layer 3] MARK       — Flag positions where your personal voice should go. YOU add the expressions — the tool only marks where.
+[Layer 1] CLEAN: Remove overused filler phrases. Built-in lists for Chinese (21), English (16), Japanese (10), Korean (8).
+[Layer 2] RESTRUCTURE: Vary sentence rhythm. Lead with opinions. Replace vague adjectives with specific numbers. Add rhetorical questions for natural tone.
+[Layer 3] MARK: Flag positions where your personal voice should go. YOU add the expressions; the tool only marks where.
 ```
 
 ### What this is NOT
@@ -45,10 +45,10 @@ DeAI is a text editing assistant. It does not generate content, access files, ma
 
 | Language | Filler phrases removed | Voice markers |
 |----------|----------------------|---------------|
-| Chinese 中文 | 21 phrases | 说白了/搞毛/讲真/离谱 |
-| English | 16 phrases | tbh/ngl/fwiw/lowkey |
-| Japanese 日本語 | 10 phrases | ぶっちゃけ/マジで/ヤバい |
-| Korean 한국어 | 8 phrases | 솔직히/진짜/대박 |
+| Chinese 中文 | 21 phrases | [💬] 只标位置，词你自己填 |
+| English | 16 phrases | [💬] position only, your own words |
+| Japanese 日本語 | 10 phrases | [💬] 位置のみ、言葉は自分で |
+| Korean 한국어 | 8 phrases | [💬] 위치만 표시, 표현은 직접 |
 
 ### Platform Style Guides
 
@@ -64,9 +64,9 @@ Optionally specify a target platform for style-appropriate editing. DeAI will ex
 ### How to Use
 
 1. Open `prompt.md`, copy the full text into any AI
-2. Paste your AI-drafted text with the prefix `DeAI:` — for example: "DeAI: [your text here]"
+2. Paste your AI-drafted text with the prefix `DeAI:`, for example: "DeAI: [your text here]"
 3. Optionally add platform: "DeAI: [your text] target: WeChat"
-4. Review the output — [💬] markers show where to add your own words
+4. Review the output. [💬] markers show where to add your own words
 5. Replace markers with your expressions, done
 
 ---
@@ -82,9 +82,9 @@ DeAI是一个写作编辑工具，帮你把AI初稿改成带有你个人风格�
 ### 三层编辑
 
 ```
-[第一层] 清理     — 删掉过度使用的套话。内置中文21个、英文16个、日文10个、韩文8个。
-[第二层] 重组     — 调节句子节奏、观点前置、数字替换形容词、加反问增加自然感。
-[第三层] 标注     — 标记应该加入你个人表达的位置。你自己加，工具只标位置。
+[第一层] 清理：删掉过度使用的套话。内置中文21个、英文16个、日文10个、韩文8个。
+[第二层] 重组：调节句子节奏、观点前置、数字替换形容词、加反问增加自然感。
+[第三层] 标注：标记应该加入你个人表达的位置。你自己加，工具只标位置。
 ```
 
 ### 这个工具不是什么
@@ -96,9 +96,9 @@ DeAI是文字编辑助手。它不生成内容、不访问文件、不联网、�
 ### 使用方法
 
 1. 打开 `prompt.md`，复制全文到任何AI
-2. 粘贴AI初稿，前面加 `DeAI:` 前缀——例如："DeAI: [粘贴文字]"
+2. 粘贴AI初稿，前面加 `DeAI:` 前缀，例如："DeAI: [粘贴文字]"
 3. 可选在末尾加："目标：微信"
-4. 查看输出 — [💬] 标记了应该加你自己表达的位置
+4. 查看输出，[💬] 标记了应该加你自己表达的位置
 5. 替换标记，完成
 
 ---
