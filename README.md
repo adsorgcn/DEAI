@@ -42,6 +42,8 @@ PROFILE is an extension for explicit requests to rewrite or draft with a supplie
 
 ## 版本 / Version
 
+1.6.0：MARK 1.4.0，数字分两档：公共数字能搜就搜并带出处与日期，搜不到不写；个人数字没有算法，原文怎么写就怎么留，不估算，不留空给用户填。去掉 [📊] 标记。PROFILE 1.2 不变。
+
 1.5.1：加 CITATION.cff、.zenodo.json 与自动发版工作流，Zenodo 存档发 DOI；正文与 1.5.0 相同。
 
 1.5.0：MARK 1.3.0（保底层不变，加读者估计、按置信加权的基调层、方言指纹、案例算法、引文逐字）加 PROFILE 1.2（读者估计优先于体裁默认、脏字不作指纹、方言只用有证据的词、引文逐字）。变更记录看 git tag。

@@ -1,6 +1,6 @@
 ---
 name: DeAI
-version: 1.5.1
+version: 1.6.0
 description: "DeAI: Edit AI drafts using the default MARK workflow: a floor that removes filler, adjusts rhythm and marks places for the author's own expressions, plus a weighted tone layer that estimates who will read the piece and sets register, case domain and quotation level to that reader. Dialect is the fingerprint, never profanity. Explicit PROFILE requests use a supplied evidence-based author profile to rewrite or draft text. MARK supports Chinese, English, Japanese and Korean; PROFILE uses only the languages supported by its supplied evidence."
 author: ilang-ai
 homepage: https://ilang.ai
@@ -17,7 +17,7 @@ tags:
 ::ILANG::v5.0
 [TYPE:skill_router]
 [ID:DEAI-MODE-ROUTER-20261106]
-[BASE_VERSION:1.3.0]
+[BASE_VERSION:1.4.0]
 [EXTENSION_VERSION:1.2]
 [STATUS:calibrated_on_public_forum_corpus]
 
@@ -26,6 +26,7 @@ tags:
   T:MARK 1.3.0 分两层 保底层每稿必跑 基调层按读者估计的置信加权 置信高全跑 置信中只标案例位置 置信低只跑保底
   T:两种模式的输出第一行都是读者估计 峰值 跨度 置信 用户一句话可改 改了就按改后的重做基调
   T:指纹是方言不是脏字 两种模式都不生成粗口 方言在 MARK 只标位置 在 PROFILE 只用画像有证据的词
+  T:数字分两档 公共数字能搜就搜并带出处与日期 搜不到不写 个人数字没有算法 原文怎么写就怎么留 不估算 不留空给用户填
   T:用户显式指定 mode=PROFILE 或明确要求使用已选定本人画像写作时 读取 references/profile-mode-v1.2-2026-11-06.ilang.md 与指定画像
   T:profile=SUN 映射到 profiles/sun-v1.1-2026-10-03.ilang.md 该画像为中文 已用本人2009年至2020年的公开论坛发言校准 画像文件是证据记录 1.2 的输出规则以执行规则为准
   T:PROFILE 和 MARK 为独立路径 不在 PROFILE 中叠加默认 prompt.md 的只标位置 固定问句数量或平台口吻
@@ -54,7 +55,7 @@ DeAI is a writing quality tool that helps you edit AI drafts into text that carr
 ```text
 FLOOR (runs on every draft, guarantees a passable text):
   CLEAN:       Remove overused filler phrases. Built-in lists for Chinese (21), English (16), Japanese (10), Korean (8).
-  RESTRUCTURE: Vary sentence rhythm. Lead with opinions. Replace vague adjectives with specific numbers. Add rhetorical questions for natural tone.
+  RESTRUCTURE: Vary sentence rhythm. Lead with opinions. Public figures looked up and written with source and date, or left as written; personal figures left as written, never estimated. Add rhetorical questions for natural tone.
   MARK:        Flag positions where your personal voice should go: [💬] your own words, [🗣] a word from your own dialect. YOU add the expressions; the tool only marks where.
 
 TONE LAYER (weighted by the confidence of the reader estimate):
@@ -116,7 +117,7 @@ DeAI是一个写作编辑工具，帮你把AI初稿改成带有你个人风格�
 ```text
 保底层（每稿必跑，保证至少及格）：
   清理：删掉过度使用的套话。内置中文21个、英文16个、日文10个、韩文8个。
-  重组：调节句子节奏、观点前置、数字替换形容词、加反问增加自然感。
+  重组：调节句子节奏、观点前置、公共数字查证后带出处写上（查不到就不动）、个人数字不动不估、加反问增加自然感。
   标注：标记应该加入你个人表达的位置。[💬] 你自己的话，[🗣] 你自己的方言。你自己加，工具只标位置。
 
 基调层（按读者估计的置信加权）：
