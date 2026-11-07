@@ -1,0 +1,46 @@
+{
+  "title": "DeAI: make AI drafts sound like you, and write in your own voice from an evidence-based author profile",
+  "description": "<p>DeAI is a prompt product written in iLang v5.0 that edits AI-drafted text into text carrying the author's own voice. Its default MARK mode has a floor and a weighted tone layer. The floor removes filler phrases in Chinese, English, Japanese and Korean, restores rhythm, flags repeated structures and over-complex sentences, and marks the positions where the author's own words and dialect belong; it marks, it never writes them. The tone layer estimates who will most likely read the piece (peak register, spread, confidence), prints that estimate first for the author to correct, sets one base register at the peak, applies a case algorithm (one claim, one case, a specific scene, one-to-one mapping, closed on the image) and quotes verbatim or not at all; its weight is the confidence of the estimate. Dialect is the fingerprint; the tool never proposes profanity and never invents facts or numbers.</p><p>The PROFILE extension rewrites or drafts from a supplied, evidence-based author profile; the bundled SUN profile is calibrated on the owner's public forum posts from 2009 to 2020. Every iLang file lints with the canon validator and ships an IML 0.5 machine form compiled by the reference codec.</p>",
+  "version": "1.5.0",
+  "upload_type": "software",
+  "license": "MIT",
+  "access_right": "open",
+  "creators": [
+    {
+      "name": "Zhu, Long Quan",
+      "orcid": "0009-0004-4540-8082",
+      "affiliation": "iLang Inc."
+    }
+  ],
+  "keywords": [
+    "iLang",
+    "DeAI",
+    "AI writing",
+    "authorial voice",
+    "author profile",
+    "prompt",
+    "writing style",
+    "Chinese",
+    "multilingual"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/adsorgcn/DEAI",
+      "relation": "isSupplementTo",
+      "resource_type": "software",
+      "scheme": "url"
+    },
+    {
+      "identifier": "10.5281/zenodo.21821452",
+      "relation": "isDerivedFrom",
+      "resource_type": "software",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.22823285",
+      "relation": "references",
+      "resource_type": "software",
+      "scheme": "doi"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+cff-version: 1.2.0
+message: "If you use DeAI, please cite it as below."
+title: "DeAI: make AI drafts sound like you, and write in your own voice from an evidence-based author profile"
+abstract: >-
+  DeAI is a prompt product written in iLang v5.0 that edits AI-drafted text
+  into text carrying the author's own voice. Its default MARK mode has a floor
+  and a weighted tone layer. The floor removes filler phrases in Chinese,
+  English, Japanese and Korean, restores rhythm, flags repeated structures and
+  over-complex sentences, and marks the positions where the author's own words
+  and dialect belong; it marks, it never writes them. The tone layer estimates
+  who will most likely read the piece (peak register, spread, confidence),
+  prints that estimate first for the author to correct, sets one base register
+  at the peak, applies a case algorithm (one claim, one case, a specific scene,
+  one-to-one mapping, closed on the image) and quotes verbatim or not at all;
+  its weight is the confidence of the estimate. Dialect is the fingerprint;
+  the tool never proposes profanity and never invents facts or numbers. The
+  PROFILE extension rewrites or drafts from a supplied, evidence-based author
+  profile; the bundled SUN profile is calibrated on the owner's public forum
+  posts from 2009 to 2020. Every iLang file lints with the canon validator and
+  ships an IML 0.5 machine form compiled by the reference codec.
+type: software
+authors:
+  - given-names: "Long Quan"
+    family-names: "Zhu"
+    orcid: "https://orcid.org/0009-0004-4540-8082"
+    affiliation: "iLang Inc."
+repository-code: "https://github.com/adsorgcn/DEAI"
+url: "https://github.com/adsorgcn/DEAI"
+license: MIT
+version: "1.5.0"
+date-released: "2026-11-07"
+keywords:
+  - iLang
+  - DeAI
+  - AI writing
+  - authorial voice
+  - author profile
+  - prompt
+  - writing style
+  - Chinese
+  - multilingual
+references:
+  - type: software
+    title: "iLang Protocol Specification"
+    doi: "10.5281/zenodo.21821452"
+    repository-code: "https://github.com/ilang-ai/ilang-spec"
+    authors:
+      - given-names: "Long Quan"
+        family-names: "Zhu"
+    notes: "DeAI is written in iLang v5.0 and ends every edit with the f_v5 action score defined there (MODULE::PRODUCT, Part II)."
+  - type: software
+    title: "IML (I-Lang Machine Layer) reference codec"
+    doi: "10.5281/zenodo.22823285"
+    repository-code: "https://github.com/ilang-ai/iml-protocol"
+    authors:
+      - given-names: "Long Quan"
+        family-names: "Zhu"
+    notes: "The .iml.md files in this repository are the IML 0.5 forms of the iLang files, compiled by this codec."
