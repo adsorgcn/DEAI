@@ -50,12 +50,12 @@ PROFILE is an extension for explicit requests to rewrite or draft with a supplie
 
 ## 引用 / Citation
 
-概念 DOI（指向最新版本）：https://doi.org/10.5281/zenodo.24028757 。版本 DOI 见各 release，1.5.1 是 https://doi.org/10.5281/zenodo.24028758 。引用格式在 `CITATION.cff`，GitHub 页面右侧「Cite this repository」可直接复制。
+概念 DOI（指向最新版本）：https://doi.org/10.5281/zenodo.24028757 。版本 DOI 见各 release，1.6.0 是 https://doi.org/10.5281/zenodo.24030185 ，1.5.1 是 https://doi.org/10.5281/zenodo.24028758 。引用格式在 `CITATION.cff`，GitHub 页面右侧「Cite this repository」可直接复制。
 
-Concept DOI (always resolves to the latest version): https://doi.org/10.5281/zenodo.24028757 . Each release has its own version DOI; 1.5.1 is https://doi.org/10.5281/zenodo.24028758 . The citation format is in `CITATION.cff`; use "Cite this repository" on the GitHub page.
+Concept DOI (always resolves to the latest version): https://doi.org/10.5281/zenodo.24028757 . Each release has its own version DOI; 1.6.0 is https://doi.org/10.5281/zenodo.24030185 , 1.5.1 is https://doi.org/10.5281/zenodo.24028758 . The citation format is in `CITATION.cff`; use "Cite this repository" on the GitHub page.
 
 ```text
-Zhu, Long Quan (2026). DeAI: make AI drafts sound like you, and write in your own voice from an evidence-based author profile (1.5.1). iLang Inc. https://doi.org/10.5281/zenodo.24028757
+Zhu, Long Quan (2026). DeAI: make AI drafts sound like you, and write in your own voice from an evidence-based author profile (1.6.0). iLang Inc. https://doi.org/10.5281/zenodo.24028757
 ```
 
 ## License
