@@ -1,5 +1,7 @@
 # DeAI
 
+[![DOI](https://zenodo.org/badge/1403191717.svg)](https://zenodo.org/badge/latestdoi/1403191717)
+
 默认 MARK 模式把 AI 初稿改成带你自己声音的文字。保底层删套话、调节奏、标出该由你亲自写的位置，只标，不替你写。基调层先算这篇大概率谁读，再把整篇的基调、案例和引文定到那个读者身上：读者在市井，就用最直白的话和人人见过的场面；读者在高知，就引诗词典故。指纹是方言，不是脏字。
 
 The default MARK mode has a floor and a tone layer. The floor removes filler, restores rhythm and marks where your own voice belongs; it marks only, never writes for you. The tone layer estimates who will most likely read the piece and sets the register, the case domain and the quotation level to that reader. Dialect is the fingerprint, never profanity.
@@ -39,6 +41,8 @@ PROFILE is an extension for explicit requests to rewrite or draft with a supplie
 | `sun-writing-v1.2-2026-11-06.ilang.md` | SUN 一体化写作提示词，内嵌 PROFILE 执行规则 1.2 与画像 1.1，可直接复制使用 |
 
 ## 版本 / Version
+
+1.5.1：加 CITATION.cff、.zenodo.json 与自动发版工作流，Zenodo 存档发 DOI；正文与 1.5.0 相同。
 
 1.5.0：MARK 1.3.0（保底层不变，加读者估计、按置信加权的基调层、方言指纹、案例算法、引文逐字）加 PROFILE 1.2（读者估计优先于体裁默认、脏字不作指纹、方言只用有证据的词、引文逐字）。变更记录看 git tag。
 

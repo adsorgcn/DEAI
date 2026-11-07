@@ -1,6 +1,6 @@
 ---
 name: DeAI
-version: 1.5.0
+version: 1.5.1
 description: "DeAI: Edit AI drafts using the default MARK workflow: a floor that removes filler, adjusts rhythm and marks places for the author's own expressions, plus a weighted tone layer that estimates who will read the piece and sets register, case domain and quotation level to that reader. Dialect is the fingerprint, never profanity. Explicit PROFILE requests use a supplied evidence-based author profile to rewrite or draft text. MARK supports Chinese, English, Japanese and Korean; PROFILE uses only the languages supported by its supplied evidence."
 author: ilang-ai
 homepage: https://ilang.ai
