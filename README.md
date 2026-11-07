@@ -46,6 +46,16 @@ PROFILE is an extension for explicit requests to rewrite or draft with a supplie
 
 1.5.0：MARK 1.3.0（保底层不变，加读者估计、按置信加权的基调层、方言指纹、案例算法、引文逐字）加 PROFILE 1.2（读者估计优先于体裁默认、脏字不作指纹、方言只用有证据的词、引文逐字）。变更记录看 git tag。
 
+## 引用 / Citation
+
+概念 DOI（指向最新版本）：https://doi.org/10.5281/zenodo.24028757 。版本 DOI 见各 release，1.5.1 是 https://doi.org/10.5281/zenodo.24028758 。引用格式在 `CITATION.cff`，GitHub 页面右侧「Cite this repository」可直接复制。
+
+Concept DOI (always resolves to the latest version): https://doi.org/10.5281/zenodo.24028757 . Each release has its own version DOI; 1.5.1 is https://doi.org/10.5281/zenodo.24028758 . The citation format is in `CITATION.cff`; use "Cite this repository" on the GitHub page.
+
+```text
+Zhu, Long Quan (2026). DeAI: make AI drafts sound like you, and write in your own voice from an evidence-based author profile (1.5.1). iLang Inc. https://doi.org/10.5281/zenodo.24028757
+```
+
 ## License
 
 MIT. © 2026 iLang Inc.
